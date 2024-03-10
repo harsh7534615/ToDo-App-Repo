@@ -4,7 +4,8 @@ import { registerUser, loginUser } from '../controller/auth-controller.js';
 import { addTodo, getAllTodos, toggleTodoDone, updateTodo, deleteTodo } from '../controller/todo-controller.js';
 
 const route = express.Router();
-
+// const verifyToken = require('../middleware/authMiddleware');
+import {verifyToken} from '../model/authMiddleware.js'
 
 route.post('/todos', addTodo)
 route.get('/todos', getAllTodos);

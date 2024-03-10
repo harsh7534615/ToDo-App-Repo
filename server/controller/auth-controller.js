@@ -1,4 +1,6 @@
 import User from '../model/user.js';
+import jwt from 'jsonwebtoken'
+// const jwt = require('jsonwebtoken');
 
 export const registerUser = async (req, res) => {
     try {
@@ -21,6 +23,9 @@ export const loginUser = async (req, res) => {
         } else {
             res.status(401).json({ message: 'Invalid credentials' });
         }
+        const token = jwt.sign({ userId: user._id }, 'your-secret-key', {
+            expiresIn: '1h',
+            });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
