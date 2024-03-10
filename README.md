@@ -26,7 +26,7 @@ The Todo App provides users with a platform to create, update, and delete tasks.
 
 - **Frontend**: React.js, Redux, React Router
 - **Backend**: Express.js, MongoDB, Mongoose
-- **Authentication**: Firebase Authentication
+- **Authentication**: JWT
 - **Styling**: CSS, Bootstrap
 
 ## Usage
